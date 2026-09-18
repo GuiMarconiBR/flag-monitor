@@ -1,0 +1,20 @@
+services:
+  core:
+    image: flag-monitor:local
+    build: .
+    command: ["node", "src/core/core.js"]
+    ports: ["4000:4000"]
+
+  backend:
+    image: flag-monitor:local
+    build: .
+    ports: ["3000:3000"]
+    environment:
+      CORE_URL: http://core:4000/health
+    depends_on: [core]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 3

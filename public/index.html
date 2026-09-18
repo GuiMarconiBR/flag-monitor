@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monitor de servidor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Monitor de servidor</h1>
+    <section id="flag" class="unknown" aria-live="polite">
+      <svg viewBox="0 0 120 140" width="160" role="img" aria-label="Bandeira de status">
+        <rect x="14" y="10" width="6" height="125" rx="3" fill="#555"/>
+        <path d="M20 14 L108 14 L92 42 L108 70 L20 70 Z" fill="currentColor"/>
+      </svg>
+      <p id="label">Verificando…</p>
+    </section>
+    <h2>Histórico</h2>
+    <ul id="history"><li>Aguardando a primeira verificação.</li></ul>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

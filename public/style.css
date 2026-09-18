@@ -1,0 +1,11 @@
+body { font-family: system-ui, sans-serif; background: #f4f5f7; color: #222; margin: 0; }
+main { max-width: 520px; margin: 0 auto; padding: 24px; text-align: center; }
+#flag { color: #9aa0a6; }
+#flag.online { color: #1e9e46; }
+#flag.offline { color: #d93025; }
+#label { font-size: 1.25rem; font-weight: 700; margin: 0; }
+#history { list-style: none; padding: 0; margin: 0; text-align: left; max-height: 340px; overflow-y: auto; }
+#history li { display: flex; align-items: center; gap: 10px; padding: 8px 12px; margin-bottom: 6px; background: #fff; border-radius: 6px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; flex: none; }
+.dot.online { background: #1e9e46; }
+.dot.offline { background: #d93025; }

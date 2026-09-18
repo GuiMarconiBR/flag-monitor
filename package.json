@@ -1,0 +1,13 @@
+{
+  "name": "devops-flag-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monitor de disponibilidade de servidor com bandeira verde/vermelha",
+  "scripts": {
+    "start": "node src/backend/server.js",
+    "core": "node src/core/core.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": { "express": "^4.19.2" }
+}
